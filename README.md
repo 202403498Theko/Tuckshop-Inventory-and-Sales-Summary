@@ -39,11 +39,13 @@ Project Structure
 
 The project includes the following classes:
 
-- Main.java – runs the program
-- Product.java – stores product details
-- Sales.java – handles sales transactions
-- Payment.java – manages payments
-- Inventory.java – manages product stock
+- Main – Displays the menu,takes the user input using Scanner(it is the controller of the whole system).
+- Product – stores product details(product id,name,price and quantity)
+- Sale – handles sales transactions and shows sale information.
+- InventoryService(Service class) – it manages all products
+- SalesServices.java –This class handles the selling products.It displays all sales and calculates all revenue
+- ReportServices(Service class)-This class is essential for generating reports.
+- Report-This is a contract/interface.
 
 
 How to Run the Project
