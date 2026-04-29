@@ -1,0 +1,71 @@
+OOP Elements → Where They Appear in the Tuckshop System
+
+1. Encapsulation
+
+* location: Product, Sale
+* How:
+    * On Fields like id, name, price, quantity are private
+    * Access is controlled through methods like addStock(), reduceStock(), display()
+* Purpose: Protects data from being distorted/lost and prevents direct modification
+
+
+2. Abstraction
+
+* Where to acess: Report (interface), ReportService
+* How:
+    * Report defines generateReport() without implementation
+    * ReportService provides the actual logic
+* Purpose: Hides implementation details, only shows what must be done
+
+
+3. Inheritance
+
+* Where to acess: ReportService implements Report
+* How:
+    * ReportService inherits the contract from Report
+* Purpose: Allows code reuse and enforcing structure
+
+
+4. Polymorphism
+
+* Where to access: Report report = new ReportService();
+* How:
+    * A Report reference is used to call generateReport()
+    * Different implementations could be used later
+* Purpose: Same method, different behavior
+
+5. Classes and Objects
+
+* location: All files (Product, Sale, InventoryService, etc.)
+* How:
+    * Classes define structure
+    * Objects are created (e.g., new Product(...), new Sale(...))
+* Purpose: Blueprint + real instances
+
+
+
+6. Association
+
+* Where to access: Sale → Product
+* How:
+    * A Sale object contains a Product
+* Purpose: Shows relationship between objects
+
+7. Aggregation (Has-a relationship)
+
+* location: InventoryService, SalesServices
+* How:
+    * InventoryService has ArrayList<Product>
+    * SalesServices has ArrayList<Sale>
+* Purpose: Manages collections of objects
+
+
+8. Separation of Concerns
+
+* location: Across all classes
+* How:
+    * InventoryService → stock logic
+    * SalesServices → selling logic
+    * ReportService → reporting
+    * MainApp → user interaction
+* Purpose: Each class has a single responsibility
